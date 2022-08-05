@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 10px;
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>jQuery CSS Methods</h1>
+    <div id="box">
+      <h1>Test Box</h1>
+      <p>my name is <span>Bibekananda Singh</span></p>
+    </div>
+    <br />
+    <button id="styleButton">Add Style</button>
+    <script src="jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#styleButton").click(function () {
+          $("#box").css("background", "pink");
+          $("#box").css({"background" : "pink", "border": "5px dotted red"})
+        });
+      });
+    </script>
+  </body>
+</html>

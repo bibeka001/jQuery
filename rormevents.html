@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery Form Events</title>
+    <style>
+      body {
+        font-family: arial;
+      }
+      #box {
+        background-color: pink;
+        padding: 10px;
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Form Events</h1>
+    <form action="" id="sform">
+      <label for="">Name</label>
+      <input type="text" id="sname" /><br />
+      <label for="">Class</label>
+      <input type="text" id="sclass" /><br />
+
+      <label for="">Country</label>
+      <select id="scountry">
+        <option value="German">German</option>
+        <option value="London">London</option>
+        <option value="Russia">Russia</option>
+        <option value="Spain">Spain</option>
+        <option value="Switzerland">Switzerland</option>
+      </select>
+      <br /><br />
+      <input type="submit" />
+    </form>
+    <div id="test" style="border:1px solid red; margin-top: 20px;"></div>
+    <script src="jquery.js"></script>
+    <script src="event.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#sform").css("border", "1px solid red");
+      });
+    </script>
+  </body>
+</html>

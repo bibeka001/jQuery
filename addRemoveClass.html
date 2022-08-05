@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 10px;
+        border: 1px solid #000;
+      }
+      .first {
+        background: tan;
+      }
+      .second {
+        background: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>jQuery Class</h1>
+    <div id="box">
+      <h2>Test Box</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+        adipisci possimus soluta eius voluptatem non. Quod, ullam molestiae
+        saepe est impedit obcaecati! Earum enim blanditiis vitae dolores fugit
+        libero ea.
+      </p>
+    </div>
+    <br />
+    <button id="addButton">Add Class</button>
+    <button id="removeButton">Remove Class</button>
+    <button id="toggleButton">Toggle class</button>
+    <script src="jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#addButton").click(function () {
+          $("#box").addClass("first second");
+        });
+        $("#removeButton").click(function(){
+            $("#box").removeClass("second");
+        })
+        $("#toggleButton").click(function(){
+            $("#box").toggleClass("second");
+        })
+      });
+    </script>
+  </body>
+</html>

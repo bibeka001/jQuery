@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Do Practice</title>
+  </head>
+  <body>
+    <div>
+      <h2>This is jQuery Practice sheet</h2>
+      <p class="data">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, rerum?
+        Quia explicabo dolores, nulla illo sed, dicta esse consectetur a
+        adipisci assumenda error quisquam. Quae tempore autem voluptate odio
+        totam.
+      </p>
+    </div>
+    <div id="details">
+      <label for="">Country</label>
+      <select name="" id="clist">
+        <option id="cname">India</option>
+        <option id="cname">Switzerland</option>
+        <option id="cname">Russia</option>
+        <option id="cname">Germany</option>
+        <option id="cname">Spain</option>
+        <option id="cname">UK</option>
+      </select>
+    </div>
+    <div>
+      <label for="">City</label>
+      <select name="" id="citylist">
+        <option id="cityname">New Delhi</option>
+        <option id="cityname">Bern</option>
+        <option id="cityname">Moscow</option>
+        <option id="cityname">Berlin</option>
+        <option id="cityname">Madrid</option>
+        <option id="cityname">London</option>
+      </select>
+    </div>
+
+    <div
+      id="top"
+      style="border: 5px solid blue; margin-top: 5px solid black"
+    ></div>
+    <br /><br />
+    <input type="submit" />
+    <script src="jquery.js"></script>
+    <script src="practice1.js"></script>
+    <script>
+      $(document).ready(function () {
+        var a = $(".data").html();
+        console.log(a);
+        $(".data").css("background-color", "red");
+        $(".data").click(function () {
+          $(".data").css("background-color", "lime");
+        });
+        $(".data").mouseenter(function () {
+          var b = $(".data").html();
+          console.log(b);
+          $(".data").css("background-color", "purple");
+        });
+        $(".data").mouseleave(function () {
+          $(".data").css("background-color", "pink");
+        });
+        $("body").keypress(function () {
+          $(this).css("background-color", "yellow");
+        });
+        $("body").keyup(function () {
+          $("this").css("margin-top", "5px");
+        });
+      });
+    </script>
+  </body>
+</html>

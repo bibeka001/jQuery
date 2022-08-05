@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selectors in jQuery</title>
+  </head>
+  <body>
+    <div id="one">
+      <h2>Type one</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis
+        suscipit laudantium unde reiciendis ex sunt repellendus animi cumque?
+        Fugiat nam consequuntur natus et. Corrupti, error. Debitis maxime
+        maiores minima ab.
+      </p>
+    </div>
+    <div id="two">
+      <h2>Type two</h2>
+      <p>Corrupti, error. Debitis maxime maiores minima ab.</p>
+    </div>
+    <div id="three" class="test">
+      <h2>Type three</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis
+        suscipit laudantium unde reiciendis ex sunt repellendus animi cumque?
+        Fugiat nam consequuntur natus et.
+      </p>
+    </div>
+    <ul id="list">
+      <li>Orange</li>
+      <li class="test">Banana</li>
+      <li>Grapes</li>
+      <li class="test">Apple</li>
+      <li>Guava</li>
+    </ul>
+
+    <script src="jquery.js"></script>
+    <!-- <script>
+      $(document).ready(function () {
+        console.log("hello");
+        var test = $("#three").html();
+        console.log(test);
+      });
+    </script>
+ -->
+    <script>
+      $(document).ready(function () {
+        // $("#list").css("color", "red");
+        // $("*").css("border", "1px solid red");
+        // $("li:last").css("border", "2px solid green");
+        $("ul li:eq(0 )").css("border", "3px solid orange");
+        // $("ul li:lt(2)").css("border", "4px solid magenta");
+      });
+    </script>
+  </body>
+</html>

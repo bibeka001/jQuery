@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 10px;
+        border: 2px solid green;
+      }
+      .boxbg {
+        background: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>jQuery ON() Methods</h1>
+    <div id="box">
+      <h2>Tese Box</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor fugiat
+        ad modi odio reprehenderit facere sunt vel quod, quisquam voluptates,
+        sequi eligendi asperiores cum aliquid consequuntur cupiditate, earum
+        nisi fugit?
+      </p>
+    </div>
+    <br />
+    <button>Remove</button>
+
+    <script src="jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        // $("#box").on("click", function () {
+        //   $(this).css("background", "orange");
+        // });
+        // $("#box").on("mouseover mouseout", function () {
+        //   $(this).toggleClass("boxbg");
+        // });
+
+        $("#box").on({
+          click: function () {
+            $(this).css("background", "tan");
+          },
+          mouseover: function () {
+            $(this).css("background", "green");
+          },
+          mouseout: function () {
+            $(this).css("background", "blue");
+          },
+        });
+        $("button").click(function () {
+          $("#box").off("mouseover mouseout");
+        });
+      });
+    </script>
+  </body>
+</html>
